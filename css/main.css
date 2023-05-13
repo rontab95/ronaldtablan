@@ -1352,7 +1352,12 @@ a:hover {
   align-items: center;
 }
 
+#name h1{
 
+  color:#0000ff;
+  font-size:50px;
+  font-weight:bold;
+}
 
 
 #title p {
