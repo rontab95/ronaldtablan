@@ -10,4 +10,7 @@ function openNav() {
     document.getElementById("main").style.marginLeft = "0";
   }
 
-  
+  function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+    menu.classList.toggle('active');
+}

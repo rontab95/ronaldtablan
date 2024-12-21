@@ -215,7 +215,7 @@
     flex-flow: row wrap;
     text-align: center;
     /* padding-bottom: 0.15em; */
-    padding: 2.5rem;
+    /* padding: 2.5rem; */
   }
   
   #about h2 {
@@ -925,7 +925,7 @@
     /**HEADER**/
   
     header {
-      padding: 15px 0;
+      padding-top: 4rem;
     }
   
     .sticky {
@@ -1283,7 +1283,7 @@
   
   /* Additional CSS for the parallax effect */
   .parallax {
-    background-image: url(../image/dark.jpg);
+    background-image: url(../image/Background.jpg);
     height: 250px;
     background-attachment: fixed;
     background-position: center;
@@ -1341,11 +1341,8 @@
   
     margin: 10px;
   }
-  
-  a:hover {
-    text-shadow: 0 0 5px blue;
-  }
-  
+ 
+    
   /* Shiny Button CSS */
   
   .buttonItem {
@@ -1406,7 +1403,7 @@
     .sticky {
       position: fixed;
       top: 0;
-      width: calc(100% + 17px);
+      width: 100%; /* Ensure the header spans the viewport width */
     }
   
   }
@@ -1556,3 +1553,118 @@
   body, html { 
     overflow-x:hidden; 
   }
+ 
+  #nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #nav-menu li {
+    margin: 0 5px;
+  }
+  
+  #nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 5px; /* Smooth corners */
+    transition: all 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Hover effect with light blue shadow */
+  #nav-menu a:hover {
+    background-color: #8bbfeb; /* Light blue background */
+    box-shadow: 0 4px 10px rgba(13, 53, 78, 0.6); /* Subtle light blue shadow */
+    transform: translateY(-2px); /* Slight upward movement */
+  }
+
+  #frontend-title {
+  color: #20c997; /* Teal color for contrast */
+  font-weight: bold; 
+  text-transform: uppercase;
+  font-size: 2.5rem; 
+  font-family: 'Roboto', sans-serif;
+
+}
+
+/* Optional: Add a gradient for a more dynamic effect */
+#frontend-title {
+  background: linear-gradient(90deg, #87CEEB, #4B0082); /* Light Blue to Indigo */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+#name-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800; /* Extra-Bold */
+  font-size: 3.5rem;
+  background: linear-gradient(90deg, #4739df, #5f7f9f); /* Dark Navy to Medium Blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Gradient text effect */
+  
+  html {
+    overflow-y: scroll; /* Forces scrollbar always to be visible */
+  }
+  
+  @media (max-width: 414px) {
+    #nav-menu {
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav-menu li {
+        margin: 5px 0; /* Adjust the spacing as needed */
+        padding: 0;
+    }
+
+    #nav-menu li a {
+        font-size: 16px; /* Adjust font size for better visibility */
+        padding: 8px 12px; /* Reduce padding inside links */
+    }
+}
+
+
+  nav ul {
+      display: none!important;
+      flex-direction: column!important;
+      background-color: #fff!important;
+      position: absolute;
+      top: 60px!important; /* adjust according to your header height */
+      left: 0!important;
+      width: 100%!important;
+      padding: 0!important;
+      margin: 0!important;
+      list-style: none!important;
+  }
+
+  nav ul li {
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+  }
+
+  nav ul li a {
+      display: block;
+      padding: 15px 0;
+  }
+}
+
+/* Show the menu when it is toggled */
+nav ul.show {
+  display: flex;
+}
+
+
+}
+
+
+
+  

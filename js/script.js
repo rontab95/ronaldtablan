@@ -1,3 +1,20 @@
+
+
+function toggleMenu() {
+  const menu = document.getElementById('nav-menu');
+  menu.classList.toggle('show'); // Toggle the "show" class
+}
+
+// Close menu when a menu item is clicked
+document.querySelectorAll('#nav-menu a').forEach(item => {
+  item.addEventListener('click', () => {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.remove('show'); // Remove the "show" class
+  });
+});
+
+
+
 const canvas = document.getElementById('canv');
 const ctx = canvas.getContext('2d');
 

@@ -5,6 +5,55 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+/* Hide the hamburger icon on desktop */
+.hamburger {
+  display: none!important;
+  cursor: pointer!important;
+  flex-direction: column!important;
+  gap: 4px!important;
+  width: 25px!important;
+  margin: 10px auto;  /*centers the hamburger*/
+}
+
+.hamburger div {
+  background-color: #333!important;
+  height: 3px!important;;
+  border-radius: 3px!important;
+}
+
+/* Display hamburger icon and hide menu on smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex!important;
+  }
+  nav ul {
+    display: none!important;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 150px; /* adjust according to your header height */
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 0;
+}
+}
+
+/* Show the menu when it is toggled */
+nav ul.show {
+display: flex!important;
+}
 
  html {
     font-family: sans-serif; /* 1 */
