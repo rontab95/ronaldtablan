@@ -471,3 +471,8 @@ display: flex!important;
   th {
     padding: 0;
   }
+
+  .title p{
+     
+          color: black;
+        }
