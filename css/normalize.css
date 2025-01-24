@@ -147,7 +147,7 @@ display: flex!important;
   a:active,
   a:hover {
     outline: 0;
-    color:red!important;
+    color:white;
   }
   
   /* Text-level semantics
