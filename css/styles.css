@@ -206,6 +206,7 @@ ol {
 
 #about h2 {
   color: white;
+  font-family:"Playfair Display", Georgia, serif;
 }
 
 .about .contact-section .content-wrapper h2 {
@@ -243,7 +244,7 @@ ol {
 
 .html {
 
-  color: orange;
+  color:#0A59A4;
 }
 
 
@@ -475,7 +476,7 @@ aside {
 
 .portfolio p {
 
-  text-align: center;
+  
   color: #000;
 }
 
@@ -709,6 +710,7 @@ aside {
   header {
     justify-content: space-around;
     padding: 33px 0;
+    z-index: 9999;
   }
 
   header .content-wrapper {
@@ -914,13 +916,7 @@ aside {
     padding-top: 4rem;
   } */
 
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: calc(100% + 17px);
-
-  }
-
+ 
 
   /* Hero */
   .hero-area h1 {
@@ -1177,11 +1173,6 @@ h2 {
   }
 
 
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: calc(100% + 1px);
-  }
 }
 
 @media(min-width:1280px) {
@@ -1230,20 +1221,10 @@ h2 {
 
 
 
-
-.sticky+.content {
-  padding-top: 102px;
-
-
-}
-
-
 .container h2 {
   color: orange;
 
 }
-
-
 
 .composition__photo:hover {
   outline: 0.25em solid orange;
@@ -1343,6 +1324,7 @@ h2 {
   color: #0000ff;
   font-size: 50px;
   font-weight: bold;
+  font-family:"Playfair Display", Georgia, serif;
 
 
 
@@ -1385,14 +1367,6 @@ h2 {
   }
 
 
-
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    /* Ensure the header spans the viewport width */
-  }
-
 }
 
 .works-description {
@@ -1407,7 +1381,7 @@ h2 {
 }
 
 .works-description a {
-  color: #007bff;
+  color: #0A59A4;
   text-decoration: none;
   background-color: initial;
   padding: 0.25rem;
@@ -1418,7 +1392,7 @@ h2 {
 }
 
 .about-contact a {
-  color: orange;
+  color: #ffffff;
   text-decoration: none;
   padding: 0 !important;
 
@@ -1514,7 +1488,7 @@ li {
 
 #skills h3 {
 
-  color: orange;
+  color: #0A59A4;
   font-size: 35px;
 }
 
@@ -1530,6 +1504,7 @@ li {
   font-size: 18px;
   line-height: 36px;
   margin-bottom: 18px;
+  text-align:left;
 }
 
 #skills h2 {
@@ -1600,7 +1575,7 @@ html {
 
 /* Optional: Add a gradient for a more dynamic effect */
 #frontend-title {
-  background: linear-gradient(90deg, #87CEEB, #4B0082);
+  background: linear-gradient(90deg, #0c3748, #0e0117);
   /* Light Blue to Indigo */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1614,7 +1589,7 @@ html {
   font-weight: 800;
   /* Extra-Bold */
   font-size: 3.5rem;
-  background: linear-gradient(90deg, #4739df, #5f7f9f);
+  background: linear-gradient(90deg, #020010, #48484d);
   /* Dark Navy to Medium Blue */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1800,7 +1775,7 @@ html {
 
 #skills h3 {
 
-  color: orange;
+  color: #0A59A4;
   font-size: 35px;
 }
 
@@ -1822,6 +1797,7 @@ html {
   font-size: 2.5em;
   margin-top: 1.5em;
   margin-bottom: -1em;
+  font-family:"Playfair Display", Georgia, serif;
 }
 .portfolio-items a{
 
@@ -1831,5 +1807,70 @@ html {
 
  
   color: green;
+}
+
+.live-site-button {
+  background: rgba(70, 130, 180, 0.25); /* Steel blue with transparency */
+  color: #1a1a1a; /* Dark text */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.live-site-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(70, 130, 180, 0.4), rgba(60, 110, 160, 0.4));
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.live-site-button:hover::before {
+  left: 0;
+}
+
+.live-site-button:hover {
+  color: #000; /* Even darker on hover */
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(70, 130, 180, 0.4), 0 10px 25px rgba(60, 110, 160, 0.4);
+}
+
+.live-site-button:active {
+  transform: scale(0.95);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* ensure it's above all content */
+  background-color: white; /* make sure it's not transparent */
+}
+
+header {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+  padding-top: 120px; /* match or slightly exceed header height */
+}
+
+.intro h3{
+  text-align: left!important;
 }
 
