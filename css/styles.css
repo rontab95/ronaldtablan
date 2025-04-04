@@ -1874,3 +1874,13 @@ header {
   text-align: left!important;
 }
 
+@media (max-width: 768px) {
+  .live-site-button {
+    text-align: center;
+    margin-left:64px;
+  }
+  .portfolio p{
+    text-align: center;
+  }
+}
+
